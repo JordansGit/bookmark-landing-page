@@ -1,0 +1,41 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  --soft-blue: hsl(231, 69%, 60%);      /* Primary */
+  --soft-red: hsl(0, 94%, 66%);        /* Primary */
+  --grayish-blue: hsl(229, 8%, 60%);    /* Neutral */
+  --very-dark-blue: hsl(229, 31%, 21%);   /* Neutral */
+}
+
+body {
+  font-size: 18px;
+  background: white;
+}
+
+/* Form Section */
+.form {
+  background: var(--soft-blue);
+  color: white;
+} 
+
+.inline {
+  display: inline;
+}
+
+.submit {
+  background: var(--soft-red);
+  color: white;
+  border: none;
+}
+
+/* Footer */ 
+footer {
+  background: var(--very-dark-blue);
+  color: white;
+}
+
+footer > svg > g > path {
+  fill: white;
+}
