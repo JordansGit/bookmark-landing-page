@@ -1,3 +1,4 @@
+/* General Styles */ 
 * {
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
@@ -16,7 +17,37 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
+
+h1 {
+  font-weight: 500;
+  color: var(--very-dark-blue); 
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+h2 {
+  color: var(--very-dark-blue);
+  font-weight: 500;
+  font-size: 22px;
+}
+
+p {
+  color: var(--grayish-blue);
+  line-height: 1.6;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 14px 28px;
+  color: white;
+  background: var(--soft-blue);
+  font-weight: 500;
+}
+
 
 
 /* Header */ 
@@ -24,6 +55,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 170px;
+  margin-bottom: 55px;
 }
 
 header img {
@@ -36,19 +69,115 @@ header ul {
 
 header li {
   display: inline;
+  margin-left: 40px;
+  color: var(--very-dark-blue);
 }
+
+.login-btn {
+  background: var(--soft-red);
+  color: white;
+  padding: 14px 34px;
+  font-weight: 400;
+}
+
+header li, .login-btn {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 
 
 /* Section 1 */ 
 .main {
   display: flex;
+  margin-left: 170px;
+  margin-right: 50px;
+  position: relative;
+  justify-content: space-between;
+  padding-bottom: 30px;
 }
+
+.main-text {
+  text-align: left;
+  width: 500px;
+  margin-right: auto;
+  margin-top: 65px;
+}
+
+.main-text h1 {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.main img {
+  width: 657px;
+}
+
+.main button {
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.custom-btn {
+  color: var(--very-dark-blue);
+  background: #f4f4f4;
+}
+
 
 
 /* Tabs Section */ 
+.tabs {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs > p {
+  width: 550px;
+  margin: 5px 0 30px 0;
+}
+
+.tabs-nav {
+  list-style-type: none;
+  border-bottom: 1px solid var(--grayish-blue);
+  padding: 25px 0;
+  margin-bottom: 70px;
+}
+
+.tabs-nav li {
+  display: inline;
+  color: var(--grayish-blue);
+  padding: 22px 40px;
+  font-weight: 500;
+}
+.tabs-nav li:last-child {
+  padding: 22px 65px;
+}
+.active {
+  color: var(--very-dark-blue) !important;
+  border-bottom: 3px solid var(--soft-red);
+}
+
 .tab-content { /* add the bg shape behind the tab img here*/
   display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: 170px;
+  margin-right: 120px;
+  width: calc(100vw - 300px);
+  position: relative;
 }
+
+.tab-text {
+  width: 450px;
+}
+
+.tab-image {
+  margin-right: auto;
+}
+
 
 
 /* Cards Section */ 
@@ -73,8 +202,12 @@ header li {
   border-right: 0;
 }
 
+.card p {
+  font-size: 16px;
+}
 
 /* FAQ Section */ 
+
 
 
 /* Form Section */
@@ -92,6 +225,7 @@ header li {
   color: white;
   border: none;
 }
+
 
 
 /* Footer */ 
@@ -114,3 +248,11 @@ footer p, footer svg {
   margin-left: auto; /* right align the social media icons */ 
 }
 
+
+
+
+/* 
+if the screen gets wider, I want the tabbed content to maintain gap width, and just extend the outer sides white space (this also means my bg blue img div will be cut off) 
+so maybe create a container around tab images, put it to a fixed with so tab-text stays in the same place in each tab (since each image is a different size and we want to put tab-text margin-left: 100px or something like that. 
+
+*/ 
