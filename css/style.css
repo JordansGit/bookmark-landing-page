@@ -101,7 +101,7 @@ header li, .login-btn {
 .main-text {
   text-align: left;
   width: 500px;
-  margin-right: auto;
+  /*margin-right: auto;*/
   margin-top: 65px;
 }
 
@@ -112,6 +112,7 @@ header li, .login-btn {
 
 .main img {
   width: 657px;
+  margin-right: -50px;
 }
 
 .main button {
@@ -164,57 +165,181 @@ header li, .login-btn {
   display: flex;
   justify-content: space-between;
   text-align: left;
-  margin-left: 170px;
+  /*margin-left: 170px;*/ 
   margin-right: 120px;
-  width: calc(100vw - 300px);
+  /*width: calc(100vw - 300px);*/
   position: relative;
+  gap: 150px; /*125px*/ 
+}
+
+.img-container {
+  width: 536px;
+  text-align: right;
 }
 
 .tab-text {
   width: 450px;
+  margin-top: 40px;
+}
+
+.tab-text p {
+  margin: 22px 0 33px 0; 
 }
 
 .tab-image {
   margin-right: auto;
 }
 
+#tab2 {
+  display: none;
+}
+
+#tab3 {
+  display: none;
+}
+
+.tabs-nav li:hover {
+  cursor: pointer;
+}
 
 
 /* Cards Section */ 
-.card {
-  background: lightblue;
-  width: 250px;
-  height: 350px;
-  border: 1px solid black;
+.cards {
+  margin-top: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards > p {
+  width: 560px;
+  margin-top: 0;
+  margin-bottom: 48px;
 }
 
 .card-group {
   display: flex;
+  gap: 35px;
 }
 
+.card {
+  background: white;
+  width: 270px;
+  height: 320px;
+  border-radius: 10px;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;*/
+  padding-top: 50px;
+  position: relative;
+  box-shadow: 0 6px 8px 0 rgba(83, 104, 223, 0.2);
+}
+
+.card2 {
+  margin-top: 35px;
+}
+
+.card3 {
+  margin-top: 70px;
+}
+/*
+.browser-img {
+  width: 100px;
+}*/
 
 .card-bottom {
-  border: 10px solid transparent;
-  border-image: url(../images/bg-dots.svg) 9 round; 
-  border-image-outset: 10px;
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-image: url(../images/bg-dots.svg); 
+  border-image-repeat: round;
+  border-image-width: 4px 0 0 0;
+  border-image-slice: 9;
+  border-image-outset: 15px;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /*width: 250px;
+  height: 45px;*/
+}
+
+.card-bottom button {
+  width: 227px;
 }
 
 .card p {
   font-size: 16px;
+  margin: 5px 0 20px 0;
 }
 
+.card h2 {
+  margin: 23px 0 0 0;
+}
+
+
+
 /* FAQ Section */ 
+.faq {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 155px;
+}
+
+.faq > p {
+  width: 500px;
+  margin-top: 0;
+}
+
+.questions {
+  width: 550px;
+  margin: 40px 0 50px 10px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid LightGray;
+}
+
+.question4 .question {
+  border-bottom: 1px solid LightGray;
+}
+
+.question p {
+  color: var(--very-dark-blue);
+}
+
+.arrow {
+  margin-right: 30px;
+}
 
 
 
 /* Form Section */
 .form {
   background: var(--soft-blue);
+  padding: 55px 0 80px 0;
+}
+
+.form p, .form h1 {
   color: white;
-} 
+}
+
+.form h1 {
+  width: 450px;
+  margin: 30px auto 40px auto;
+}
+
+.form p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
 
 .inline {
   display: inline;
@@ -222,8 +347,24 @@ header li, .login-btn {
 
 .submit {
   background: var(--soft-red);
-  color: white;
+  margin-left: 12px;
+}
+
+::placeholder {
+  opacity: 0.5;
+}
+
+.answer { /* NEED TO EDIT WIDTHS OF THIS P */ 
+  display: none; 
+}
+
+#email {
+  height: 43px;
+  border-radius: 5px;
   border: none;
+  font-size: 14px;
+  padding: 0 0 0 20px;
+  width: 280px;
 }
 
 
@@ -234,6 +375,7 @@ footer {
   color: white;
   display: flex;
   align-items: center;
+  padding: 22px 165px;
 }
 
 footer > svg > g > path {
@@ -244,8 +386,29 @@ footer p, footer svg {
   float: left; 
 }
 
+footer p {
+  color: white;
+  text-transform: uppercase;
+  margin-left: 45px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer svg {
+  margin-right: 20px;
+}
+
 .sm-icons {
   margin-left: auto; /* right align the social media icons */ 
+  height: 24px;
+}
+
+.fb-icon {
+  margin-right: 35px;
+}
+
+.tw-icon {
+  margin-bottom: 2px;
 }
 
 
