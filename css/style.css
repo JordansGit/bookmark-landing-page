@@ -39,13 +39,36 @@ p {
 }
 
 button {
-  border: none;
   border-radius: 5px;
   font-size: 14px;
-  padding: 14px 28px;
+  padding: 12px 26px;
   color: white;
   background: var(--soft-blue);
   font-weight: 500;
+  border: 2px solid var(--soft-blue);
+}
+
+.bg-shape {
+  position: absolute;
+  background: var(--soft-blue); 
+  height: 350px;
+  z-index: -1;
+}
+
+.bg-shape1 {
+  right: -100px;
+  bottom: 0;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  width: 510px;
+}
+
+.bg-shape2 {
+  left: -150px;
+  bottom: -80px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  width: 630px;
 }
 
 
@@ -76,8 +99,9 @@ header li {
 .login-btn {
   background: var(--soft-red);
   color: white;
-  padding: 14px 34px;
+  padding: 10px 30px;
   font-weight: 400;
+  border: 2px solid var(--soft-red);
 }
 
 header li, .login-btn {
@@ -92,7 +116,7 @@ header li, .login-btn {
 .main {
   display: flex;
   margin-left: 170px;
-  margin-right: 50px;
+  margin-right: 100px;
   position: relative;
   justify-content: space-between;
   padding-bottom: 30px;
@@ -120,9 +144,14 @@ header li, .login-btn {
   margin-top: 20px;
 }
 
-.custom-btn {
+.firefox-btn {
   color: var(--very-dark-blue);
   background: #f4f4f4;
+  border: 2px solid #f4f4f4; 
+}
+
+.chrome-btn {
+
 }
 
 
@@ -166,7 +195,7 @@ header li, .login-btn {
   justify-content: space-between;
   text-align: left;
   /*margin-left: 170px;*/ 
-  margin-right: 120px;
+  /*margin-right: 120px;*/
   /*width: calc(100vw - 300px);*/
   position: relative;
   gap: 150px; /*125px*/ 
@@ -198,9 +227,6 @@ header li, .login-btn {
   display: none;
 }
 
-.tabs-nav li:hover {
-  cursor: pointer;
-}
 
 
 /* Cards Section */ 
@@ -348,6 +374,7 @@ header li, .login-btn {
 .submit {
   background: var(--soft-red);
   margin-left: 12px;
+  border: 2px solid var(--soft-red);
 }
 
 ::placeholder {
@@ -356,15 +383,17 @@ header li, .login-btn {
 
 .answer { /* NEED TO EDIT WIDTHS OF THIS P */ 
   display: none; 
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 #email {
-  height: 43px;
+  height: 41px;
   border-radius: 5px;
-  border: none;
+  border: 2px solid white;
   font-size: 14px;
   padding: 0 0 0 20px;
-  width: 280px;
+  width: 270px;
 }
 
 
@@ -412,10 +441,69 @@ footer svg {
 }
 
 
+/* Active States */ 
+button:hover, .tabs-nav li:hover, .questions > div:hover, header ul li, footer p, footer img {
+  cursor: pointer;
+}
 
+header ul li:hover, .tabs-nav li:hover {
+  color: var(--soft-red);
+}
+
+.login-btn:hover {
+  background: white;
+  color: var(--soft-red);
+  font-weight: 500;
+  letter-spacing: 1.8px;
+}
+
+.chrome-btn:hover, .tab-text button:hover, .card-bottom button:hover, .faq button:hover {
+  background: white;
+  color: var(--soft-blue);
+}
+
+.firefox-btn:hover { /* need to change these colors, looks like a custom color to me */ 
+  border: 2px solid var(--soft-red);
+  color: var(--soft-red);
+}
+
+.question:hover p {
+  color: var(--soft-red);
+}
+
+.submit:hover {
+  background: white;
+  color: var(--soft-red);
+}
+
+#email:focus {
+  border: 2px solid var(--soft-red);
+  outline: none;
+}
+
+footer p:hover {
+  color: var(--soft-red);
+}
+
+.sm-icons img:hover {
+  filter: invert(44%) sepia(66%) saturate(655%) hue-rotate(315deg) brightness(101%) contrast(96%); /* cba to change img to svg so just using a hex to filter generator in the internet to get the color. Which is fine for project work. */
+}
 
 /* 
 if the screen gets wider, I want the tabbed content to maintain gap width, and just extend the outer sides white space (this also means my bg blue img div will be cut off) 
 so maybe create a container around tab images, put it to a fixed with so tab-text stays in the same place in each tab (since each image is a different size and we want to put tab-text margin-left: 100px or something like that. 
+
+*/ 
+
+/* To Do 
+- CSS: hover states 
+- CSS: add the css for the email error 
+- JS: email/form validation js 
+- JS: faq js 
+- JS: faq > rotate arrow 180deg, change color to soft-red- when active. 
+- JS: tabs js 
+
+- in readme, specify the widths (desktop: 1440px, mobile: ..., tab... )
+
 
 */ 
