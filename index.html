@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   
   <title>Frontend Mentor | Bookmark landing page</title>
 
@@ -199,7 +201,13 @@
     <p>35,000+ already joined</p>
     <h1>Stay up-to-date with what we’re doing</h1>
     <div class="inline">
-      <input type="email" id="email" placeholder="Enter your email address">
+      <div class="email-container">
+        <input type="email" id="email" placeholder="Enter your email address">
+        <div class="error-icon">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <p class="error-msg">Whoops, make sure it's an email</p>
+      </div>
       <button class="submit" id="email-submit">Contact Us</button>
     </div>  
   </section>

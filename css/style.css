@@ -361,20 +361,22 @@ header li, .login-btn {
   margin: 30px auto 40px auto;
 }
 
-.form p {
+.form > p {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 13px;
 }
 
 .inline {
-  display: inline;
+  display: flex;
+  justify-content: center;
 }
 
 .submit {
   background: var(--soft-red);
-  margin-left: 12px;
+  margin-left: 20px;
   border: 2px solid var(--soft-red);
+  height: 45px;
 }
 
 ::placeholder {
@@ -390,11 +392,42 @@ header li, .login-btn {
 #email {
   height: 41px;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid var(--soft-blue);
   font-size: 14px;
   padding: 0 0 0 20px;
   width: 270px;
 }
+
+.email-container {
+  width: 294px;
+  height: 68px;
+  background: var(--soft-blue);
+  border-radius: 5px;
+}
+
+.error-msg {
+  font-style: italic;
+  font-size: 9px;
+  color: white;
+  margin: 4px 10px;
+  text-align: left;
+  letter-spacing: 0.8px;
+  display: none;
+}
+
+.error-icon {
+  color: var(--soft-red);
+  position: relative; 
+  display: none;
+}
+
+.error-icon i {
+  position: absolute;
+  right: 15px;
+  bottom: 13px;
+  font-size: 1.1em;
+}
+
 
 
 
@@ -496,8 +529,7 @@ so maybe create a container around tab images, put it to a fixed with so tab-tex
 */ 
 
 /* To Do 
-- CSS: hover states 
-- CSS: add the css for the email error 
+- CSS: add the css for the email error -> the exclamation mark, and the below text. 
 - JS: email/form validation js 
 - JS: faq js 
 - JS: faq > rotate arrow 180deg, change color to soft-red- when active. 
@@ -507,3 +539,10 @@ so maybe create a container around tab images, put it to a fixed with so tab-tex
 
 
 */ 
+
+
+/* 
+  error-msg -> display: block; 
+  error-icon class -> display: block; 
+  .email-container bg to red on error state. 
+*/
