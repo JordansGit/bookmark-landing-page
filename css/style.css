@@ -408,7 +408,6 @@ header li, .login-btn {
 .error-msg {
   font-style: italic;
   font-size: 9px;
-  color: white;
   margin: 4px 10px;
   text-align: left;
   letter-spacing: 0.8px;
@@ -522,6 +521,12 @@ footer p:hover {
   filter: invert(44%) sepia(66%) saturate(655%) hue-rotate(315deg) brightness(101%) contrast(96%); /* cba to change img to svg so just using a hex to filter generator in the internet to get the color. Which is fine for project work. */
 }
 
+
+/* Media Queries */ 
+
+
+
+
 /* 
 if the screen gets wider, I want the tabbed content to maintain gap width, and just extend the outer sides white space (this also means my bg blue img div will be cut off) 
 so maybe create a container around tab images, put it to a fixed with so tab-text stays in the same place in each tab (since each image is a different size and we want to put tab-text margin-left: 100px or something like that. 
@@ -529,18 +534,15 @@ so maybe create a container around tab images, put it to a fixed with so tab-tex
 */ 
 
 /* To Do 
-- CSS: add the css for the email error -> the exclamation mark, and the below text. 
-- JS: email/form validation js 
-- JS: faq js 
-- JS: faq > rotate arrow 180deg, change color to soft-red- when active. 
 - JS: tabs js 
+- JS: faq js: 
+    display text 
+    + rotate arrow 180deg, change color to soft-red- when active.
+- JS: email/form validation js 
 
 - in readme, specify the widths (desktop: 1440px, mobile: ..., tab... )
 
-
-*/ 
-
-
+*/
 /* 
   error-msg -> display: block; 
   error-icon class -> display: block; 
