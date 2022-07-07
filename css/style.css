@@ -330,6 +330,7 @@ header li, .login-btn {
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid LightGray;
+  height: 67px;
 }
 
 .question4 .question {
