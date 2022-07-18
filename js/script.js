@@ -37,24 +37,38 @@ for (var i = 0; i < questions.length; i++) {
   questions[i].addEventListener('click', displayAnswer);
 }
 
+let arrow = document.querySelectorAll('.arrow');
+let arrowColor = document.querySelectorAll('.arrow path')
+
 function displayAnswer(e) {
-  // hide all answers
+  let currAnswer = e.currentTarget.querySelector('.answer');
+  let currArrow = e.currentTarget.querySelector('.question .arrow');
+  let currArrowColor = e.currentTarget.querySelector('.question .arrow path');
+  console.log(e.currentTarget);
+  console.log(arrow);
+  console.log(arrowColor);
+  console.log(currArrowColor);
+
+
+  // hide all answers, except for currently selected answer
   for (var i = 0; i < answer.length; i++) {
-    answer[i].style.display = 'none';
+    if (answer[i] != currAnswer) {
+      answer[i].style.display = 'none';
+      arrow[i].style.transform = 'rotate(0deg)';
+      arrowColor[i].style.stroke = 'var(--arrow-blue)';
+    }
   }
 
-  // display current answer 
-  console.log(e.currentTarget);
-  let currAnswer = e.currentTarget.querySelector('.answer');
-  console.log(currAnswer);
-  currAnswer.style.display = 'flex';
+  // display current answer or, hide it if it's already selected. 
+  if (currAnswer.style.display === 'flex') {
+    currAnswer.style.display = 'none';
+    currArrow.style.transform = 'rotate(0deg)';
+    currArrowColor.style.stroke = 'var(--arrow-blue)';
+
+  } else {
+    currAnswer.style.display = 'flex';
+    currArrow.style.transform = 'rotate(180deg)';
+    currArrowColor.style.stroke = 'var(--soft-red)';
+  }
 }
 
-/* need to flip arrow img and change it's color. 
-e.currentTarget.querySelector('.question > img')
-
-maybe var arrow = e.currentTarget.querySelector('.question > img')
-arrow.style... // rotate 180deg. 
-arrow.style... // change color 
-
-*/ 

@@ -9,6 +9,7 @@
   --soft-red: hsl(0, 94%, 66%);        /* Primary */
   --grayish-blue: hsl(229, 8%, 60%);    /* Neutral */
   --very-dark-blue: hsl(229, 31%, 21%);   /* Neutral */
+  --arrow-blue: #5267DF;
 }
 
 body {
@@ -343,6 +344,10 @@ header li, .login-btn {
 
 .arrow {
   margin-right: 30px;
+}
+
+.arrow path {
+  stroke: var(--arrow-blue); 
 }
 
 
