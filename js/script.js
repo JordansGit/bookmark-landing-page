@@ -1,11 +1,16 @@
-let tabsNav = document.querySelector('.tabs-nav');
+//let tabsNav = document.querySelector('.tabs-nav');   deleted this as it's not being used  
 let tabs = document.querySelectorAll('.tabs-nav li');
 let tab1 = document.getElementById('tab1');
 let tab2 = document.getElementById('tab2');
 let tab3 = document.getElementById('tab3');
+
 let questions = document.querySelectorAll('.questions > div'); 
 let answer = document.querySelectorAll('.answer');
+let arrow = document.querySelectorAll('.arrow');
+let arrowColor = document.querySelectorAll('.arrow path')
 
+
+// tabbed section
 for (var i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener('click', displayTab); 
 }
@@ -33,12 +38,11 @@ function displayTab(e) {
   }  
 }
 
+
+// faq section 
 for (var i = 0; i < questions.length; i++) {
   questions[i].addEventListener('click', displayAnswer);
 }
-
-let arrow = document.querySelectorAll('.arrow');
-let arrowColor = document.querySelectorAll('.arrow path')
 
 function displayAnswer(e) {
   let currAnswer = e.currentTarget.querySelector('.answer');
@@ -48,7 +52,6 @@ function displayAnswer(e) {
   console.log(arrow);
   console.log(arrowColor);
   console.log(currArrowColor);
-
 
   // hide all answers, except for currently selected answer
   for (var i = 0; i < answer.length; i++) {
@@ -72,3 +75,52 @@ function displayAnswer(e) {
   }
 }
 
+
+// form validation 
+let form = document.querySelector('form');
+let emailContainer = document.querySelector('.email-container');
+let email = document.getElementById('email');
+let errorIcon = document.querySelector('.error-icon');
+let errorMsg = document.querySelector('.error-msg');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  checkEmail();
+});
+
+// function to check if email input is empty. 
+const isRequired = function(value) {
+  if (value == '') {
+    value = false;
+  } else {
+    value = true;
+  }  
+  return value;  
+}; 
+
+// function to check if email has a valid input. i.e. xyz@domain.net. 
+const isEmailValid = (x) => {
+  const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return emailFormat.test(x);
+};
+
+// return true if email is provided and it's valid. + show error msg if it returns false. 
+const checkEmail = () => {
+  let valid = false;
+  const x = email.value.trim();
+  
+  if (!isRequired(x) || !isEmailValid(x)) {
+    errorMsg.style.display = 'block'; 
+    errorIcon.style.display = 'block'; 
+    emailContainer.style.background = 'var(--soft-red)';
+    email.style.border = '2px solid var(--soft-red)';
+  } else {
+    errorMsg.style.display = 'none';  
+    errorIcon.style.display = 'none'; 
+    emailContainer.style.background = 'var(--soft-blue)';
+    email.style.border = '2px solid var(--soft-blue)';
+    valid = true;
+  }
+  return valid;
+}

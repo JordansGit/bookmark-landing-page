@@ -65,6 +65,7 @@ button {
 }
 
 .bg-shape2 {
+  top: 81px;
   left: -150px;
   bottom: -80px;
   border-top-right-radius: 200px;
@@ -207,6 +208,10 @@ header li, .login-btn {
   text-align: right;
 }
 
+.img-container-2 {
+  text-align: left;
+}
+
 .tab-text {
   width: 450px;
   margin-top: 40px;
@@ -218,6 +223,10 @@ header li, .login-btn {
 
 .tab-image {
   margin-right: auto;
+}
+
+.tab-image-2 {
+  margin-left: 84px;
 }
 
 #tab2 {
@@ -342,6 +351,15 @@ header li, .login-btn {
   color: var(--very-dark-blue);
 }
 
+.answer { 
+  display: none; 
+  text-align: left;
+  margin: 16px 18px 30px 0;
+  font-size: 16px;
+  line-height: 2.3;
+  color: hsl(229, 21%, 41%);;
+}
+
 .arrow {
   margin-right: 30px;
 }
@@ -355,7 +373,7 @@ header li, .login-btn {
 /* Form Section */
 .form {
   background: var(--soft-blue);
-  padding: 55px 0 80px 0;
+  padding: 55px 0;
 }
 
 .form p, .form h1 {
@@ -387,12 +405,6 @@ header li, .login-btn {
 
 ::placeholder {
   opacity: 0.5;
-}
-
-.answer { /* NEED TO EDIT WIDTHS OF THIS P */ 
-  display: none; 
-  text-align: left;
-  margin-bottom: 30px;
 }
 
 #email {
@@ -432,7 +444,6 @@ header li, .login-btn {
   bottom: 13px;
   font-size: 1.1em;
 }
-
 
 
 
@@ -479,6 +490,7 @@ footer svg {
 }
 
 
+
 /* Active States */ 
 button:hover, .tabs-nav li:hover, .questions > div:hover, header ul li, footer p, footer img {
   cursor: pointer;
@@ -503,6 +515,7 @@ header ul li:hover, .tabs-nav li:hover {
 .firefox-btn:hover { /* need to change these colors, looks like a custom color to me */ 
   border: 2px solid var(--soft-red);
   color: var(--soft-red);
+  background: white;
 }
 
 .question:hover p {
@@ -540,17 +553,8 @@ so maybe create a container around tab images, put it to a fixed with so tab-tex
 */ 
 
 /* To Do 
-- JS: tabs js 
-- JS: faq js: 
-    display text 
-    + rotate arrow 180deg, change color to soft-red- when active.
-- JS: email/form validation js 
+- CSS: media queries.
 
-- in readme, specify the widths (desktop: 1440px, mobile: ..., tab... )
+- in readme, specify the design spec widths (desktop: 1440px, mobile: ..., tab... )
 
-*/
-/* 
-  error-msg -> display: block; 
-  error-icon class -> display: block; 
-  .email-container bg to red on error state. 
 */
