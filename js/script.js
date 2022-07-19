@@ -124,3 +124,27 @@ const checkEmail = () => {
   }
   return valid;
 }
+
+// mobile menu 
+let mobileNav = document.querySelector('.mobile-nav-icon');
+let mobileMenu = document.querySelector('.mobile-menu');
+let mobileNavClose = document.querySelector('.mobile-nav-close');
+let headerImg = document.querySelectorAll('header img');
+let header = document.querySelector('#header');
+
+mobileNav.addEventListener('click', openMobileMenu);
+mobileNavClose.addEventListener('click', closeMobileMenu);
+
+function openMobileMenu() {
+  mobileMenu.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  headerImg.forEach((img) => img.style.display = 'none');
+  header.style.marginBottom += '64px';
+}
+
+function closeMobileMenu() {
+  mobileMenu.style.display = 'none';
+  document.body.style.overflow = 'visible';
+  headerImg.forEach((img) => img.style.display = 'block');
+  header.style.marginBottom -= '40px';
+}
