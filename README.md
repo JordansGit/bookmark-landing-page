@@ -31,6 +31,8 @@ Users should be able to:
 Desktop
 ![Desktop Screenshot](./screenshots/desktop-screenshot.png)
 
+
+-------
 Mobile
 
 ![Mobile Screenshot](./screenshots/mobile-screenshot.png)
